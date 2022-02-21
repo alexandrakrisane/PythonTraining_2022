@@ -20,4 +20,5 @@ print(60*60*24*365)
 print(10**100)
 
 # how much will your 1000 Euro investment be worth after 12 years of 6% yearly interest?
-print(round(1000 * 1.06**12, 3))
+precision = 2
+print(round(1000 * 1.06**12, precision))

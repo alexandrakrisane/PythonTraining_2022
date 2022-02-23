@@ -39,3 +39,16 @@ room_volume2 = width * length * height
 print('Room volume is {:.2f}m\u00B3'.format(room_volume2))
 
 
+
+print("\n___________Exercise 3 ________________")
+# Celsius to Fahrenheit
+prec = 6 # precision
+t_celsius = float(input("Enter some temperature in Celsius: "))
+t_fahrenheit = 32 + t_celsius * (9 / 5)
+print(f"Temperature in Celsius is {t_celsius:.2f}\u2103. \nTemperature in Fahrenheit is {t_fahrenheit:.2f}\u2109.")
+
+print('\nsecond rounding option:')
+t_celsius_rounded = round(t_celsius, prec)
+t_fahrenheit_rounded = round(t_fahrenheit, prec)
+print(f"Temperature {t_celsius_rounded}\u2103 will be {t_fahrenheit_rounded}\u2109 Fahrenheit")
+print(f"Temperature in Celsius is {t_celsius_rounded}\u2103.\nTemperature in Fahrenheit is {t_fahrenheit_rounded}\u2109.")

@@ -53,17 +53,17 @@ third = float(input("Input third number: "))  # 3
 # set 6 = 3 4 5 .
 
 # else if
-if first < second < third:  # 3 4 5
+if first <= second <= third:  # 3 4 5
     print(f"numbers in the ascending order are: {first}, {second}, {third}")
-elif first < third < second:  # 3 7 5
+elif first <= third <= second:  # 3 7 5
     print(f"numbers in the ascending order are: {first}, {third}, {second}")
-elif second < first < third:  # 5  4 7
+elif second <= first <= third:  # 5  4 7
     print(f"numbers in the ascending order are: {second}, {first}, {third} ")
-elif second < third < first:  # 5 2 3
+elif second <= third <= first:  # 5 2 3
     print(f"numbers in the ascending order are: {second}, {third}, {first}")
-elif third < first < second:  # 5 7 3
+elif third <= first <= second:  # 5 7 3
     print(f"numbers in the ascending order are: {third}, {first}, {second}")
-elif third < second < first:  # 5 4 -3
+elif third <= second <= first:  # 5 4 -3
     print(f"numbers in the ascending order are: {third}, {second}, {first}")
 
 

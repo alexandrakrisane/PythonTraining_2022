@@ -10,6 +10,9 @@ elif body_temp <= 37:
 else:
     print("possible fever")
 
+
+
+
 print("\n___________Exercise 2 ________________\n")
 
 # 15% of monthly salary

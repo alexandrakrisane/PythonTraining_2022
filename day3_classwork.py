@@ -51,6 +51,8 @@ third = float(input("Input third number: "))  # 3
 # set 4 = 5 7 3 .
 # set 5 = 3 7 5 .
 # set 6 = 3 4 5 .
+# set 7 = 3 3 4 .
+# set 8 = 3 3 3 .
 
 # else if
 if first <= second <= third:  # 3 4 5

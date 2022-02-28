@@ -70,20 +70,20 @@ elif third <= second <= first:  # 5 4 -3
 
 
 # # Second option: nested ifs (ugly):
-# if first > second:
-#     if first > third:
-#         if second > third:
-#             print(f"numbers in the ascending order are: {third}, {second}, {first}")
-#         else:  #second <= third:  5 2 3
-#             print(f"numbers in the ascending order are: {second}, {third}, {first}")
-#     else:  #first < = third:   5  4  7
-#         if second <= third:  # second > third is impossible in this branch
-#             print(f"numbers in the ascending order are: {second}, {first}, {third} ")
-# else: # first <= second
-#     if second > third:  # 5  7  3
-#         if first > third:
-#             print(f"numbers in the ascending order are: {third}, {first}, {second}")
-#         else: #  first <= third: 3 7 5
-#             print(f"numbers in the ascending order are: {first}, {third}, {second}")
-#     else: # second < = third 3 4 5
-#         print(f"numbers in the ascending order are: {first}, {second}, {third}")
+if first > second:
+    if first > third:
+        if second > third:
+            print(f"numbers in the ascending order are: {third}, {second}, {first}")
+        else:  #second <= third:  5 2 3
+            print(f"numbers in the ascending order are: {second}, {third}, {first}")
+    else:  #first < = third:   5  4  7
+        if second <= third:  # second > third is impossible in this branch
+            print(f"numbers in the ascending order are: {second}, {first}, {third} ")
+else: # first <= second
+    if second > third:  # 5  7  3
+        if first > third:
+            print(f"numbers in the ascending order are: {third}, {first}, {second}")
+        else: #  first <= third: 3 7 5
+            print(f"numbers in the ascending order are: {first}, {third}, {second}")
+    else: # second < = third 3 4 5
+        print(f"numbers in the ascending order are: {first}, {second}, {third}")

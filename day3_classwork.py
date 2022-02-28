@@ -37,6 +37,7 @@ else:
     print("No Christmas bonus")
 
 
+
 print("\n___________Exercise 3 ________________\n")
 # Order output
 # 3 numbers in ascending order - use if, elif and else

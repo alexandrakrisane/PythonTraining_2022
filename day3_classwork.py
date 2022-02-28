@@ -1,4 +1,5 @@
 # 28.02.2022
+
 print("\n___________Exercise 1 ________________\n")
 body_temp = float(input("What is your temperature in \u2103? "))
 
@@ -8,8 +9,6 @@ elif body_temp <= 37:
     print("all right\n")
 else:
     print("possible fever")
-
-
 
 print("\n___________Exercise 2 ________________\n")
 
@@ -28,7 +27,8 @@ extra_years = years_worked - minimal_work_years
 
 if years_worked > minimal_work_years:
     xmas_bonus = float(salary * bonus_percent * extra_years)
-    print(f"Your Christmas bonus will be: {xmas_bonus:.2f}\u20ac") ## without :.2f it will be like 30.0 eur, but I want 30.00 €
+    print(
+        f"Your Christmas bonus will be: {xmas_bonus:.2f}\u20ac")  ## without :.2f it will be like 30.0 eur, but I want 30.00 €
 else:
     xmas_bonus = 0
     print("No Christmas bonus")

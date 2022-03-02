@@ -14,7 +14,7 @@ for i in range(1, 101):
         print("Buzz", end=",")
     else:
         print(i, end=",")
-    i += 1
+#   i += 1
 
 
 print("\n___________Exercise 2 ________________\n")

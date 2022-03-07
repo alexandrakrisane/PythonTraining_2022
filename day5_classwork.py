@@ -14,13 +14,14 @@ print(reversed_name.capitalize() + extra_text + name[0].upper() + "?")
 print("\n___________Exercise 2 ________________\n")
 
 text = input("Input you word or phrase: ")
+masking_char = '*'
 text_masked = ''
 text_unmasked = ''
 for c in text:
     if c == " ":
         text_masked += " "
     else:
-        text_masked += "*"
+        text_masked += masking_char
 print(text_masked)
 
 guess_letter = input("Input your guess (one symbol): ")
@@ -30,7 +31,7 @@ for c in text:
     elif c == " ":
         text_unmasked += " "
     else:
-        text_unmasked += "*"
+        text_unmasked += masking_char
 print(text_unmasked)
 
 
@@ -49,5 +50,4 @@ start = position_not
 end = position_bad + len(word_bad)
 
 if 0 < position_not < position_bad:
-    user_output = user_input.replace(user_input[start:end], replacement)
-    print(user_output.replace("  "," "))
+    print(user_input.replace(user_input[start:end], replacement))

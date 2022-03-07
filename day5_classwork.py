@@ -36,6 +36,7 @@ print(text_unmasked)
 
 
 print("\n___________Exercise 3 ________________\n")
+
 user_input = input("Input you word or phrase: ")
 print("\n" + user_input)
 word_not = 'not'

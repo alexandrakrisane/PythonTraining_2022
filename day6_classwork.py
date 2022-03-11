@@ -62,3 +62,25 @@ list_of_words = user_input_text.split()
 list_of_reversed_words = [word[::-1] for word in list_of_words]
 reversed_text = ' '.join(list_of_reversed_words).capitalize()
 print(reversed_text)
+
+
+
+
+print("\n___________Exercise 4 ________________\n")
+# Find and output the first 20 (even better option to chose how many first primes we want) prime numbers in the
+# form of the list i.e. [2,3,5,7,11...]
+
+user_input = input("enter the number of primes you want to get: ")
+list_of_primes = []
+number_of_primes = int(user_input)
+n = 1
+
+while len(list_of_primes) < number_of_primes:
+    n += 1
+    for i in range(2, n):
+        if (n % i) == 0:               #print(n, "is not a prime number")
+            break
+    else:
+        list_of_primes.append(n)     #print(n, "is a prime number")
+
+print(f"List of prime numbers: {list_of_primes}")

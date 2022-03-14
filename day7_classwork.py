@@ -17,7 +17,7 @@ def add_mult(*numbers):
 
 # ex.2
 # 2. Palindrome
-def is_palindrome(text):
+def is_palindrome(text: str):
     text = text.replace(' ', '').lower()
     return text == text[::-1]  # returns True or False (boolean)
 

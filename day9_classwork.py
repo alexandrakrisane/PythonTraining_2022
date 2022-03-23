@@ -72,8 +72,8 @@ def is_pangram_3b(text, alphabet):
     sequence = ''.join(sequence)
     return set(sequence) == set(alphabet)
 
-# print(is_pangram_3b('Tfū, čeh, džungļos blīkšķ, zvaņģim jācērp!', alphabet=a_lv))
-# print(is_pangram_3b("The five boxing wizards jump quickly", alphabet=a_en))
+print(is_pangram_3b('Tfū, čeh, džungļos blīkšķ, zvaņģim jācērp!', alphabet=a_lv))
+print(is_pangram_3b("The five boxing wizards jump quickly", alphabet=a_en))
 
 
 

@@ -1,9 +1,5 @@
 # 10 28.03.2022
 
-# can be put inside the class or it's better to make _print_lyrics static inside the class?
-
-
-
 class Song:
     def __init__(self, title, author, lyrics):
         self.title = title

@@ -1,3 +1,5 @@
+# 10 28.03.2022
+
 # can be put inside the class or it's better to make _print_lyrics static inside the class?
 def print_lines(lyrics, line_count=-1):
     all_lines_count = len(lyrics)

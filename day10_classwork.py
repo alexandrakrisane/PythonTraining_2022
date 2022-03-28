@@ -9,23 +9,24 @@ class Song:
             title = 'Unknown'
         if author == '':
             author = 'Unknown'
-        print(f"\n\nNew song made:\nTitle: {self.title} \nAuthor: {self.author}")
+        print(f"\n\nNew song made:\nTitle: {title} \nAuthor: {author}")
 
     def sing(self, lines_present=-1):
         x = '_' * (len(self.author + self.title) + 3)
         print(x, '\nSinging:')
-        self._print_lines(self.lyrics, lines_present)
+        self._print_lyrics(self.lyrics, lines_present)
         return self
 
     def yell(self, lines_present=-1):
         x = '_' * (len(self.author + self.title) + 3)
-        lines_upper = [line.upper() for line in self.lyrics]
-        self._print_lines(lines_upper, lines_present)
+        lyrics_upper = [line.upper() for line in self.lyrics]
         print(x, '\nYELLING:')
+        self._print_lyrics(lyrics_upper, lines_present)
         return self
 
+# can be put outside the class or it's better to make _print_lyrics static?
     @staticmethod
-    def _print_lines(lyrics, line_count=-1):
+    def _print_lyrics(lyrics, line_count=-1):
         all_lines_count = len(lyrics)
         if line_count == -1:
             line_count = len(lyrics)
@@ -42,8 +43,9 @@ class Rap(Song):
         x = '_' * (len(self.author + self.title) + 3)
         lyrics = [line.replace(' ', f' {drop.upper()} ') + ' ' + drop.upper() for line in self.lyrics]
         print(x, '\nRapping:')
-        self._print_lines(lyrics, lines_present)
+        self._print_lyrics(lyrics, lines_present)
         return self
+
 
 
 ziemelmeita = Song('Ziemeļmeita', 'Jumprava', ['Gāju meklēt ziemeļmeitu', 'Garu, tālu ceļu veicu'])

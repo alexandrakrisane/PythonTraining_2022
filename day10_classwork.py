@@ -1,16 +1,7 @@
 # 10 28.03.2022
 
 # can be put inside the class or it's better to make _print_lyrics static inside the class?
-def print_lines(lyrics, line_count=-1):
-    all_lines_count = len(lyrics)
-    if line_count == -1:
-        line_count = len(lyrics)
-    elif line_count <= 0:
-        print("no lines to print")
-    elif all_lines_count < line_count:
-        print(f"only {all_lines_count} lines can be printed:\n")
-    for i in lyrics[:line_count]:
-        print(i)
+
 
 
 class Song:
@@ -27,15 +18,27 @@ class Song:
     def sing(self, lines_present=-1):
         x = '_' * (len(self.author + self.title) + 3)
         print(x, '\nSinging:')
-        print_lines(self.lyrics, lines_present)
+        self._print_lines(self.lyrics, lines_present)
         return self
 
     def yell(self, lines_present=-1):
         x = '_' * (len(self.author + self.title) + 3)
         lines_upper = [line.upper() for line in self.lyrics]
         print(x, '\nYELLING:')
-        print_lines(lines_upper, lines_present)
+        self._print_lines(lines_upper, lines_present)
         return self
+
+    @staticmethod
+    def _print_lines(lyrics, line_count=-1):
+        all_lines_count = len(lyrics)
+        if line_count == -1:
+            line_count = len(lyrics)
+        elif line_count <= 0:
+            print("no lines to print")
+        elif all_lines_count < line_count:
+            print(f"only {all_lines_count} lines can be printed:\n")
+        for i in lyrics[:line_count]:
+            print(i)
 
 
 class Rap(Song):
@@ -43,7 +46,7 @@ class Rap(Song):
         x = '_' * (len(self.author + self.title) + 3)
         lyrics = [line.replace(' ', f' {drop.upper()} ') + ' ' + drop.upper() for line in self.lyrics]
         print(x, '\nRapping:')
-        print_lines(lyrics, lines_present)
+        self._print_lines(lyrics, lines_present)
         return self
 
 

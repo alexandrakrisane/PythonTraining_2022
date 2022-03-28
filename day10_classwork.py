@@ -9,7 +9,7 @@ class Song:
             title = 'Unknown'
         if author == '':
             author = 'Unknown'
-        print(f"\n\nNew song made:\nTitle: {title} \nAuthor: {author}")
+        print(f"\n\nNew song made:\nTitle: {self.title} \nAuthor: {self.author}")
 
     def sing(self, lines_present=-1):
         x = '_' * (len(self.author + self.title) + 3)
@@ -20,8 +20,8 @@ class Song:
     def yell(self, lines_present=-1):
         x = '_' * (len(self.author + self.title) + 3)
         lines_upper = [line.upper() for line in self.lyrics]
-        print(x, '\nYELLING:')
         self._print_lines(lines_upper, lines_present)
+        print(x, '\nYELLING:')
         return self
 
     @staticmethod
@@ -50,7 +50,7 @@ ziemelmeita = Song('Ziemeļmeita', 'Jumprava', ['Gāju meklēt ziemeļmeitu', 'G
 
 ziemelmeita.sing(1).yell(10).sing().sing(-3)
 
-
 zrap = Rap("Ziemeļmeita", "Jumprava", ["Gāju meklēt ziemeļmeitu", "Garu, tālu ceļu veicu"])
 
-zrap.break_it(1, "yah")
+zrap.break_it(drop="yah")
+zrap.break_it(1, "yahhh")

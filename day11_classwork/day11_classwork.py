@@ -23,5 +23,5 @@ cards.get_cards(count=62)
 cards.all_cards_back_into_deck()
 #
 cards.get_cards(count=3)
-# cards.print_used_cards()
+cards.print_used_cards()
 

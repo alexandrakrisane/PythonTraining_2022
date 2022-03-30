@@ -6,7 +6,7 @@ from shuffled_cards import get_shuffled_cards
 class Deck:
     def __init__(self):
         self.available = get_shuffled_cards()  # shuffled deck is returned
-        self.spent = []   # empty list
+        self.spent = []  # empty list
 
     def shuffle(self):
         random.shuffle(self.available)
@@ -48,8 +48,10 @@ class Deck:
     def all_cards_back_into_deck(self):
         print(f"All {len(self.spent)} dealt cards will be put back into the deck now")
         self.spent.clear()
+        # print(f"empty list of dealt cards => {len(self.spent)} are currently in use")
         return self
 
-
     def print_used_cards(self):
-        pass
+        remains = len(self.available) - len(self.spent)
+        print(f"Following cards are already dealt ({remains} cards remains in the deck): \n{self.spent}")
+        return self

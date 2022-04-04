@@ -64,7 +64,7 @@ def clean_punkts(srcpath, destpath):
         for p in string.punctuation:
             new_text = new_text.replace(p, "")
         dest_file.write(new_text)
-        return dest_file.closed
+        return dest_file.closed and src_file.closed
 
 clean_punkts("veidenbaums.txt", "veidenbaums_no_punctuation.txt")
 

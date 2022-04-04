@@ -14,6 +14,16 @@ def file_line_len(fpath):
 
 print(file_line_len("veidenbaums.txt"))
 
+def file_line_len_2(fpath):
+    f = open(fpath, "rb")
+    count = 0
+    for line in f:
+        count += 1
+    f.close()
+    return count
+
+
+print(file_line_len_2("veidenbaums.txt"))
 
 # 1b
 '''write the function get_poem_lines (fpath), which returns a list with only those lines that contain poetry.

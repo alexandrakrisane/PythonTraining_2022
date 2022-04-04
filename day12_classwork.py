@@ -14,6 +14,7 @@ def file_line_len(fpath):
 
 print(file_line_len("veidenbaums.txt"))
 
+
 def file_line_len_2(fpath):
     f = open(fpath, "rb")
     count = 0
@@ -76,8 +77,8 @@ def clean_punkts(srcpath, destpath):
         dest_file.write(new_text)
         return dest_file.closed and src_file.closed
 
-clean_punkts("veidenbaums.txt", "veidenbaums_no_punctuation.txt")
 
+clean_punkts("veidenbaums.txt", "veidenbaums_no_punctuation.txt")
 
 # 1f
 '''  write the function get_word_usage (srcpath, destpath)

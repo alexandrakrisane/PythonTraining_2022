@@ -25,7 +25,7 @@ def rate_data_to_file(rate_data):
         json.dump(rate_data, output_file, indent=4)
 
 
-# print("eur rates for today: ", get_currency('EUR'))
+#print("eur rates for today: ", get_latest_currency_rate('EUR'))
 
 rate_data_to_file(get_latest_currency_rate('AUD'))
 

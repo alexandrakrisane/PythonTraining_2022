@@ -1,6 +1,7 @@
 # 12. 04.04.2022
 
 import string
+from collections import Counter
 
 # 1a
 '''write the function file_line_len(fpath), which returns the number of lines in the file
@@ -89,3 +90,20 @@ vards skaits
 un 3423
 es 3242
 PS to test, for srcpath use the file that is poetry only and has no punctuation and also the words are all in lowercase'''
+
+
+def get_word_usage(srcpath, destpath):
+    with open(srcpath, encoding="utf-8") as fin:
+        text = fin.read()
+        text = text.replace("\n", " ").lower()
+        words = text.split()
+        word_counter = Counter(words)
+    with open(destpath, "w", encoding="UTF-8") as f:
+        f.write("word\tcount\n")  # write the header
+        for word, count in word_counter.most_common():  # unpacking the tuple in each iteration
+            f.write(f"{word}\t{count}\n")
+    return word_counter
+
+
+my_counter = get_word_usage("veidenbaums_no_punctuation.txt", "veidenbaums_word_usage.tsv")  # tab separated values
+print(my_counter.most_common(50))

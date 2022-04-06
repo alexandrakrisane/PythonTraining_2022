@@ -20,7 +20,6 @@ def get_latest_currency_rate(currency):
         print(x, '-', rate_data[x])
 
 
-
 def rate_data_to_file(rate_data):
     with open("rate_ccy.json", mode="w") as output_file:
         json.dump(rate_data, output_file, indent=4)
@@ -31,7 +30,6 @@ def rate_data_to_file(rate_data):
 rate_data_to_file(get_latest_currency_rate('AUD'))
 
 get_latest_currency_rate('BGN')
-
 
 # currency = 'EUR'
 # url = default_url + '/' + currency

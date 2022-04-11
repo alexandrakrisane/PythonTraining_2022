@@ -32,7 +32,7 @@ get_all_msg_links = [x for x in get_all_links if x.startswith("https://www.ss.co
 
 # print(get_all_links)
 
-with open("C:\\Temp\\all_cars_first_page.txt", "w") as f:
+with open("all_cars_first_page.txt", "w") as f:
     json.dump(get_all_msg_links, f, indent=2)
 
 # with open("C:\\Temp\\all_cars_first_page.csv", "w") as f:
@@ -41,5 +41,5 @@ with open("C:\\Temp\\all_cars_first_page.txt", "w") as f:
 # Get screenshot of the first page
 driver.maximize_window()
 
-driver.get_screenshot_as_file("C:\\Temp\\all_cars_first_page.png")
+driver.get_screenshot_as_file("all_cars_first_page.png")
 driver.close()

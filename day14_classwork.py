@@ -36,7 +36,7 @@ with open("C:\\Temp\\all_cars_first_page.txt", "w") as f:
     json.dump(get_all_msg_links, f, indent=2)
 
 # with open("C:\\Temp\\all_cars_first_page.csv", "w") as f:
-#     json.dump(get_all_msg_links, f, indent=4)
+#     json.dump(get_all_msg_links, f, indent=2)
 
 # Get screenshot of the first page
 driver.maximize_window()

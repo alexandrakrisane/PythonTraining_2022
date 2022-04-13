@@ -92,7 +92,7 @@ print(read_artists(connection))
 # print(delete_artist(name="New Name1"))
 # print(read_artists(connection))
 
-print(delete_artist(id=288, name="test"))
-print(read_artists(connection))
+# print(delete_artist(id=288, name="test"))
+# print(read_artists(connection))
 
 connection.close()

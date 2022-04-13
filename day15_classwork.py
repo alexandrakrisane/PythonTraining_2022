@@ -66,7 +66,7 @@ def delete_artist(id=None, name=""):
         cur.execute("DELETE FROM artists WHERE name = ?", (name,))
         conn.commit()
     elif id and name:
-        cur.execute("DELETE FROM artists WHERE name = ? and ArtistID = ?", (name,id))
+        cur.execute("DELETE FROM artists WHERE name = ? and ArtistId = ?", (name,id))
         conn.commit()
     else:
         print("No id or name provided")

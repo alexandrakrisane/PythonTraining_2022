@@ -40,18 +40,13 @@ def read_artists(conn):
     cur.close()
     return artists
 
-
 # print(read_artists(conn=create_connection(dbpath)))
 
 def update_artist(id, new_name):
     conn = create_connection(dbpath)
     cur = conn.cursor()
-    if id not in read_artists(conn):
-        print("Artist with id {} does not exist".format(id))
-        return cur.close()
-    else:
-        cur.execute("UPDATE artists SET name = ? WHERE ArtistId = ?", (new_name, id))
-        conn.commit()
+    cur.execute("UPDATE artists SET name = ? WHERE ArtistId = ?", (new_name, id))
+    conn.commit()
     cur.close()
     return cur.rowcount  # return number of rows updated
 
@@ -59,14 +54,14 @@ def update_artist(id, new_name):
 def delete_artist(id=None, name=""):
     conn = create_connection(dbpath)
     cur = conn.cursor()
-    if id:
+    if id and name:
+        cur.execute("DELETE FROM artists WHERE name = ? and ArtistId = ?", (name,id))
+        conn.commit()
+    elif id:
         cur.execute("DELETE FROM artists WHERE ArtistId = ?", (id,))
         conn.commit()
     elif name:
         cur.execute("DELETE FROM artists WHERE name = ?", (name,))
-        conn.commit()
-    elif id and name:
-        cur.execute("DELETE FROM artists WHERE name = ? and ArtistId = ?", (name,id))
         conn.commit()
     else:
         print("No id or name provided")
@@ -83,7 +78,7 @@ print(read_artists(connection))
 # create_artist(connection, artist_name="test")
 # print(read_artists(connection))
 #
-# print(update_artist(id=288, new_name="New Name1"))
+# print(update_artist(id=289, new_name="test"))
 # print(read_artists(connection))
 
 # print(delete_artist(id=288))
@@ -92,7 +87,7 @@ print(read_artists(connection))
 # print(delete_artist(name="New Name1"))
 # print(read_artists(connection))
 
-# print(delete_artist(id=288, name="test"))
-# print(read_artists(connection))
+print(delete_artist(id=289, name="test"))
+print(read_artists(connection))
 
 connection.close()

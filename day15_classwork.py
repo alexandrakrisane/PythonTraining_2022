@@ -65,6 +65,9 @@ def delete_artist(id=None, name=""):
     elif name:
         cur.execute("DELETE FROM artists WHERE name = ?", (name,))
         conn.commit()
+    elif id and name:
+        cur.execute("DELETE FROM artists WHERE name = ? and ArtistID = id", (name,id))
+        conn.commit()
     else:
         print("No id or name provided")
         return cur.close()
@@ -89,7 +92,7 @@ print(read_artists(connection))
 # print(delete_artist(name="New Name1"))
 # print(read_artists(connection))
 
-# print(delete_artist(id=286))
-# print(read_artists(connection))
+print(delete_artist(id=288, name="test"))
+print(read_artists(connection))
 
 connection.close()
